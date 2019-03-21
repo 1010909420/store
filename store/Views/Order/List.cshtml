@@ -1,0 +1,66 @@
+﻿@using Model.Entity
+<style>
+    .table tbody tr td {
+        vertical-align: middle;
+    }
+</style>
+
+<div class="panel">
+
+
+    <table class="table table-striped">
+        <tr>
+            <td>编号</td>
+            <td>用户名</td>
+            <td>商品名</td>
+            <td>数量</td>
+            <td>寄往地址</td>
+            <td>收件人</td>
+            <td>收件人联系方式</td>
+            <td>操作</td>
+        </tr>
+        @foreach (T_Order order in ViewBag.list)
+        {
+        <tr>
+            <td class="td-text">@order.id</td>
+            <td class="td-text">@order.userEntity.name</td>
+            <td class="td-text">@order.goodsEntity.name</td>
+            <td class="td-text">@order.quantity</td>
+            <td class="td-text">@order.addrEntity.addr</td>
+            <td class="td-text">@order.addrEntity.name</td>
+            <td class="td-text">@order.addrEntity.mobile</td>
+            <td>
+                <button class="btn btn-default btn-sm" onclick="edit(@order.id)">查看</button>
+                <button class="btn btn-danger btn-sm">删除</button>
+            </td>
+        </tr>
+        }
+    </table>
+
+    <!--引入分页Layout-->
+    <partial name="~/Views/Shared/Paging.cshtml" />
+</div>
+
+
+
+<script>
+    function edit(id) {
+        location.href = "../store/edit?goodsId=" + id;
+    }
+
+    function del(id) {
+        $.ajax({
+            url: 'delGoods',
+            data: {
+                goodsId: id
+            },
+            method: 'post',
+            success: function (json) {
+                alert(json);
+                setTimeout(window.location.reload(), 2000);
+            }
+        });
+    }
+
+
+</script>

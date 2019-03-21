@@ -1,0 +1,64 @@
+﻿@using Model.Entity
+<style>
+    .table tbody tr td {
+        vertical-align: middle;
+    }
+</style>
+
+<div class="panel">
+
+
+    <table class="table table-striped">
+        <tr>
+            <td>编号</td>
+            <td>用户账号</td>
+            <td>用户名</td>
+            <td>性别</td>
+            <td>年龄</td>
+            <td>用户等级</td>
+            <td>操作</td>
+        </tr>
+        @foreach (T_User user in ViewBag.list)
+        {
+            <tr>
+                <td class="td-text">@user.id</td>
+                <td class="td-text">@user.account</td>
+                <td class="td-text">@user.name</td>
+                <td>@(user.sex == 0 ? "男" : "女")</td>
+                <td class="td-text">@user.age</td>
+                <td>@user.level</td>
+                <td>
+                    <button class="btn btn-default btn-sm" onclick="edit(@user.id)">查看</button>
+                    <button class="btn btn-danger btn-sm">删除</button>
+                </td>
+            </tr>
+        }
+    </table>
+
+    <!--引入分页Layout-->
+    <partial name="~/Views/Shared/Paging.cshtml" />
+</div>
+
+
+
+<script>
+    function edit(id) {
+        location.href = "../store/edit?goodsId=" + id;
+    }
+
+    function del(id) {
+        $.ajax({
+            url: 'delGoods',
+            data: {
+                goodsId: id
+            },
+            method: 'post',
+            success: function (json) {
+                alert(json);
+                setTimeout(window.location.reload(), 2000);
+            }
+        });
+    }
+
+
+</script>

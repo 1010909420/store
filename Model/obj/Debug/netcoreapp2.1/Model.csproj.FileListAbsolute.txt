@@ -1,0 +1,9 @@
+F:\dacheng\workspace\store\store\Model\bin\Debug\netcoreapp2.1\Model.deps.json
+F:\dacheng\workspace\store\store\Model\bin\Debug\netcoreapp2.1\Model.dll
+F:\dacheng\workspace\store\store\Model\obj\Debug\netcoreapp2.1\Model.csproj.CoreCompileInputs.cache
+F:\dacheng\workspace\store\store\Model\obj\Debug\netcoreapp2.1\Model.AssemblyInfoInputs.cache
+F:\dacheng\workspace\store\store\Model\obj\Debug\netcoreapp2.1\Model.AssemblyInfo.cs
+F:\dacheng\workspace\store\store\Model\bin\Debug\netcoreapp2.1\Model.pdb
+F:\dacheng\workspace\store\store\Model\obj\Debug\netcoreapp2.1\Model.dll
+F:\dacheng\workspace\store\store\Model\obj\Debug\netcoreapp2.1\Model.pdb
+F:\dacheng\workspace\store\store\Model\obj\Debug\netcoreapp2.1\Model.csprojAssemblyReference.cache

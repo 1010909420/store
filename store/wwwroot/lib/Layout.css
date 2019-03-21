@@ -1,0 +1,235 @@
+﻿body, html {
+    margin: 0;
+    padding:0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index:9;
+}
+
+/*过渡动画，折叠侧栏菜单用*/
+wrapper > *, top-bar > * {
+    /* Enable hardware acceleration to fix laggy transitions */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+
+    -webkit-transition: all linear 0.15s;
+    transition: all linear 0.15s;
+}
+
+a, a:hover, a:visited, a:active, a:link {
+    text-decoration: none;
+}
+
+a {
+    color: #333;
+}
+
+a:hover {
+    text-shadow: 0px 0px 5px #fff;
+}
+
+/*紫色背景，白色字体*/
+.bg-purple {
+    background-color: #66c;
+    color: #fff;
+}
+
+/*蓝色背景，白色字体*/
+.bg-blue {
+    background-color: #39f !important;
+    color: #fff;
+}
+
+* {
+    /*outline: solid 1px red;*/
+    font-family: '微软雅黑';
+    font-size: 1.5rem;
+}
+
+top-bar {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    z-index:999;
+}
+
+.logo-img {
+    max-height: 50px;
+    display: inline-block;
+}
+
+#top-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#top-title > h4 {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    text-align: center;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.toggleLeft {
+    padding: 1px 5px;
+    float: left;
+    color: #eee;
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 999;
+    /*按钮文本不可选中*/
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.toggleLeft:hover {
+    color: #fff;
+    text-shadow: 0px 0px 5px #fff;
+}
+
+#toggleLeft ~ top-bar left-bar,
+#toggleLeft ~ left-content {
+    width: 200px;
+}
+
+#toggleLeft:checked ~ top-bar left-bar,
+#toggleLeft:checked ~ left-content {
+    width: 0px;
+}
+
+left-bar {
+    width: 200px;
+    overflow: hidden;
+    background-color: #fff;
+    align-items: center;
+    text-align: center;
+}
+
+right-bar {
+    padding: 5px;
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+left-content {
+    width: 200px;
+    padding-top: 50px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+right-content {
+    /*padding、border都不会使元素实际占用宽度增加，有点类似IE6的盒子模型算法*/
+    box-sizing: border-box;
+    -moz-box-sizing: border-box; /* Firefox */
+    -webkit-box-sizing: border-box; /* Safari */
+    
+    border-left:solid 1px #ccc;
+
+    flex: 1;
+    background-color: #fff;
+    padding-top: 50px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+right-content > content {
+    display: block;
+    min-height: 92%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box; /* Firefox */
+    -webkit-box-sizing: border-box; /* Safari */
+    padding: 10px;
+    background-color: #ecf0f5;/*AdminLTE的颜色*/
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+right-content > footer {
+    border-top:solid 1px #ccc;
+    padding:10px;
+    color:#333;
+    text-align:right;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.left-menu a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    min-width: 150px;
+}
+
+.left-menu a:hover {
+    background-color: #eee;
+    color: #66c;
+}
+
+.left-menu .menu-footer {
+    width: 100%;
+    padding: 10px;
+    background-color:#ccc;
+}
+
+.left-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Layout外围部分结束*/
+
+/*Layout右边内容区*/
+
+.panel-heading {
+    position:relative;
+}
+
+.table-bordered {
+    border: solid 1px #ddd !important;
+}
+
+.table tr[class=bg-blue] td {
+    text-align: center;
+    font-weight: bold;
+    min-width: 75px;
+}
+
+.table tr[class=bg-blue] a {
+    cursor: pointer;
+    color: #fff;
+}
+

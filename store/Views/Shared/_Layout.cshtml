@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>商城系统 - @ViewData["Title"]</title>
+
+    <!--BootStrap-->
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+
+    <!--日期时间控件-->
+    <link href="~/Lib/flatpickr-master/dist/flatpickr.css" rel="stylesheet" />
+    <script src="~/Lib/flatpickr-master/dist/flatpickr.js"></script>
+    <script src="~/Lib/flatpickr-master/dist/l10n/zh.js"></script>
+
+    <!--数字控件-->
+    <script src="~/Lib/wigets/numericInput.min.js"></script>
+
+    <!--自定义Select 转 ComboBox-->
+    <link href="~/Lib/bootstrap-combobox-master/css/bootstrap-combobox.css" rel="stylesheet" />
+    <script src="~/Lib/bootstrap-combobox-master/js/bootstrap-combobox.js"></script>
+
+    <!--Font Awesome-->
+    <link href="~/lib/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" />
+
+    <!--checkbox radio样式-->
+    <link href="~/lib/magic-check.css" rel="stylesheet" />
+
+    <!--模态框-->
+    <link href="~/lib/bootstrap3-dialog/dist/css/bootstrap-dialog.css" rel="stylesheet" />
+    <script src="~/lib/bootstrap3-dialog/dist/js/bootstrap-dialog.js"></script>
+
+    <!--表单验证-->
+    <script src="~/Lib/bootstrap-validator/dist/validator.js"></script>
+
+    <link href="~/lib/toastr.min.css" rel="stylesheet" />
+    <script src="~/lib/toastr.min.js"></script>
+
+    <script src="~/lib/vue.js"></script>
+
+    <!--本页面自定义的一些东西-->
+    <link href="~/lib/Layout.css" rel="stylesheet" />
+    <script src="~/lib/Layout.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">商城测试系统</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">商品管理 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="Store" asp-action="List">商品列表</a></li>
+                            <li><a asp-area="" asp-controller="Store" asp-action="Edit">增加商品</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">用户管理 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="User" asp-action="List">用户列表</a></li>
+                            <li><a asp-area="" asp-controller="User" asp-action="Edit">增加用户</a></li>
+                        </ul>
+                    </li>
+                    <li><a asp-area="" asp-controller="Order" asp-action="List">订单管理</a></li>
+                    <li><a asp-area="" asp-controller="Comment" asp-action="List">评论管理</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">你好，管理员 @ViewData["username"] <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="Home" asp-action="Logout">退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input style="width:200px" id="search" type="text" class="form-control" placeholder="搜索当前管理板块相关信息" onkeydown="enterSumbit()" value="@Context.Request.Query["s"]">
+                    </div>
+                    <a class="btn" style="background-color:#999" onclick="doSearch()">搜索</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <partial name="_CookieConsentPartial" />
+
+    <div class="container body-content">
+
+        <div>
+            <h1>商城系统管理 <small>@ViewData["Title"]</small></h1>
+        </div>
+        <br />
+        <br />
+
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2019 - 大诚工作室</p>
+        </footer>
+    </div>
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
