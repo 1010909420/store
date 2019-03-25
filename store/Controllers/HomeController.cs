@@ -69,7 +69,7 @@ namespace store.Controllers
         {
             T_UserDAO dao = new T_UserDAO();
             T_User user = dao.getByAccount(account);
-            if (Tool.MD5Encrypt(password, 32).Equals(user.password))
+            if (user != null && Tool.MD5Encrypt(password, 32).Equals(user.password))
             {
                 this.HttpContext.Session.SetString("username", user.name);
                 return Success("登陆成功", "message");

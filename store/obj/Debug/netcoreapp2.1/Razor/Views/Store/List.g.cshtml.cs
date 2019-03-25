@@ -167,7 +167,7 @@ WriteAttributeValue("", 963, goods.id, 963, 9, false);
             WriteLiteral("    </table>\r\n\r\n    <!--引入分页Layout-->\r\n    ");
             EndContext();
             BeginContext(1155, 47, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8b097746957d4f0dac3cf25e6bf052ed", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "db5d1265c2f24aa88e599f8346ec9826", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
