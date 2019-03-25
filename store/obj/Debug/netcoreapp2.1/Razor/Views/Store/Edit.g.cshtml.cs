@@ -54,7 +54,7 @@ using store.Models;
             WriteLiteral("\r\n<div id=\"app\">\r\n    ");
             EndContext();
             BeginContext(22, 2168, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4f2741578b4e4cdaa24feee73cccdc86", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "74bb85060e8249eeb34acc1579239ff9", async() => {
                 BeginContext(28, 841, true);
                 WriteLiteral(@"
         <div class=""form-group"">

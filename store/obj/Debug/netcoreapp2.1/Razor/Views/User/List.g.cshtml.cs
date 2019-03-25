@@ -167,7 +167,7 @@ WriteAttributeValue("", 860, user.id, 860, 8, false);
             WriteLiteral("    </table>\r\n\r\n    <!--引入分页Layout-->\r\n    ");
             EndContext();
             BeginContext(1051, 47, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "b42691a08f15451c8071b8b63afbf997", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "7ab9b765b6cc4b4ca03b48079427b976", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();

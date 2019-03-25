@@ -12,6 +12,7 @@ namespace Model.Entity
         public decimal? price { get; set; }
         public String presentation { get; set; }
         public int? inventory { get; set; }
+        public int? quantity { get; set; }
         public String pictureUrl1 { get; set; }
         public String pictureUrl2 { get; set; }
         public String pictureUrl3 { get; set; }

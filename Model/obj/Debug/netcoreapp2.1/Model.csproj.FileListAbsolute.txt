@@ -6,3 +6,4 @@ F:\dacheng\workspace\store\store\Model\obj\Debug\netcoreapp2.1\Model.AssemblyInf
 F:\dacheng\workspace\store\store\Model\bin\Debug\netcoreapp2.1\Model.pdb
 F:\dacheng\workspace\store\store\Model\obj\Debug\netcoreapp2.1\Model.dll
 F:\dacheng\workspace\store\store\Model\obj\Debug\netcoreapp2.1\Model.pdb
+F:\dacheng\workspace\store\store\Model\obj\Debug\netcoreapp2.1\Model.csprojAssemblyReference.cache
