@@ -131,8 +131,11 @@ namespace store.Controllers
             using (var httpClient = new HttpClient())
             {
                 //get
-                String appid = "wxc7b914b79b9ad3fe";
-                String secret = "ec6127816095041c8c233bb55fe00ebd";
+                //String appid = "wxc7b914b79b9ad3fe";
+                //String secret = "ec6127816095041c8c233bb55fe00ebd";
+                //请上微信小程序申请自身id与秘钥
+                String appid = "";
+                String secret = "";
                 var l = "https://api.weixin.qq.com/sns/jscode2session?appid=" + appid + "&secret=" + secret + "&js_code=" + code + "&grant_type=authorization_code";
 
                 var url = new Uri(l);
