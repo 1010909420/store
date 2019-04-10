@@ -20,5 +20,6 @@ namespace Model.Entity
         public String addr { get; set; }
         public String mobile { get; set; }
         public String name { get; set; }
+        public int defaultAddr { get; set; }
     }
 }

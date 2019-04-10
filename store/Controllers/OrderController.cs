@@ -14,9 +14,9 @@ using store.Models;
 
 namespace store.Controllers
 {
+    [LoginFilter]
     public class OrderController : BaseController
     {
-        [LoginFilter]
         public ActionResult List()
         {
             T_OrderDAO entityDao = new T_OrderDAO();

@@ -9,6 +9,7 @@ namespace Model.Entity
     public class T_User : BaseEntity<T_User>
     {
         public int id { get; set; }
+        public String openid { get; set; }
         public String account { get; set; }
         public String password { get; set; }
         public String name { get; set; }

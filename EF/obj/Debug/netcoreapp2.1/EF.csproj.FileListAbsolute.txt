@@ -10,3 +10,15 @@ F:\dacheng\workspace\store\store\EF\bin\Debug\netcoreapp2.1\Model.pdb
 F:\dacheng\workspace\store\store\EF\obj\Debug\netcoreapp2.1\EF.csproj.CopyComplete
 F:\dacheng\workspace\store\store\EF\obj\Debug\netcoreapp2.1\EF.dll
 F:\dacheng\workspace\store\store\EF\obj\Debug\netcoreapp2.1\EF.pdb
+E:\workspace\store\EF\bin\Debug\netcoreapp2.1\EF.deps.json
+E:\workspace\store\EF\bin\Debug\netcoreapp2.1\EF.dll
+E:\workspace\store\EF\bin\Debug\netcoreapp2.1\EF.pdb
+E:\workspace\store\EF\bin\Debug\netcoreapp2.1\Model.dll
+E:\workspace\store\EF\bin\Debug\netcoreapp2.1\Model.pdb
+E:\workspace\store\EF\obj\Debug\netcoreapp2.1\EF.csprojAssemblyReference.cache
+E:\workspace\store\EF\obj\Debug\netcoreapp2.1\EF.csproj.CoreCompileInputs.cache
+E:\workspace\store\EF\obj\Debug\netcoreapp2.1\EF.AssemblyInfoInputs.cache
+E:\workspace\store\EF\obj\Debug\netcoreapp2.1\EF.AssemblyInfo.cs
+E:\workspace\store\EF\obj\Debug\netcoreapp2.1\EF.csproj.CopyComplete
+E:\workspace\store\EF\obj\Debug\netcoreapp2.1\EF.dll
+E:\workspace\store\EF\obj\Debug\netcoreapp2.1\EF.pdb

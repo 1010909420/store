@@ -20,10 +20,7 @@ namespace store.Controllers
             List<T_Addr> list = dao.GetAll().Include(e => e.userEntity).ToList();
 
             ViewBag.list = list;
-
-            this.HttpContext.Session.SetString("username", "1010");
-            this.HttpContext.Session.SetString("password", "10101");
-
+            
             return Json(list);
         }
 

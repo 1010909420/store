@@ -15,5 +15,11 @@ namespace DAL.DAO
             StoreDbContext db = new StoreDbContext();
             return db.Set<T_User>().Where(e => e.account == account).FirstOrDefault();
         }
+
+        public T_User getByOpenid(String openid)
+        {
+            StoreDbContext db = new StoreDbContext();
+            return db.Set<T_User>().Where(e => e.openid == openid).FirstOrDefault();
+        }
     }
 }

@@ -14,6 +14,7 @@ using store.Models;
 
 namespace store.Controllers
 {
+    [LoginFilter]
     public class CommentController : BaseController
     {
 
@@ -23,7 +24,6 @@ namespace store.Controllers
             return View();
         }
 
-        [LoginFilter]
         public ActionResult List()
         {
             T_CommentDAO entityDao = new T_CommentDAO();

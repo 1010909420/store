@@ -1,5 +1,6 @@
 ﻿using DAL.Public;
 using EF;
+using Microsoft.EntityFrameworkCore;
 using Model.Entity;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,12 @@ namespace DAL.DAO
         {
             StoreDbContext db = new StoreDbContext();
             return db.Set<T_Addr>().ToList();
+        }
+
+        public List<T_Addr> GetByUserId(String userId)
+        {
+            StoreDbContext db = new StoreDbContext();
+            return db.Set<T_Addr>().Where(e => e.userId == int.Parse(userId)).OrderByDescending(e => e.userId).ToList();
         }
 
     }
