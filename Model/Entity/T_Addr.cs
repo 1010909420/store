@@ -11,7 +11,7 @@ namespace Model.Entity
     {
         public int id { get; set; }
 
-        public int? userId { get; set; }
+        public int userId { get; set; }
 
         [DBColumn(DBColumnType.ForeignKey, "t_addr", "name")]
         [ForeignKey("userId")]

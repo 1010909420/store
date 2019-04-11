@@ -83,13 +83,48 @@ namespace store.Controllers
             return Json(list);
         }
 
-        public JsonResult GetAddrListByUserId(String id)
+        public JsonResult GetAddrListByUserId(int id)
         {
             T_AddrDAO dao = new T_AddrDAO();
             List<T_Addr> list = dao.GetByUserId(id);
             return Json(list);
         }
      
+        public JsonResult GetAddrById(int id)
+        {
+            T_AddrDAO dao = new T_AddrDAO();
+            T_Addr addr = dao.GetById(id);
+            return Json(addr);
+        }
+
+        public JsonResult SaveOrUpdateAddr(int id, int userId, String name, String mobile, String addr, int defaultAddr)
+        {
+            T_AddrDAO dao = new T_AddrDAO();
+            T_Addr addrInfo = new T_Addr();
+            addrInfo.id = id;
+            addrInfo.userId = userId;
+            addrInfo.name = name;
+            addrInfo.mobile = mobile;
+            addrInfo.addr = addr;
+            addrInfo.defaultAddr = defaultAddr;
+
+            if (addrInfo.defaultAddr == 1)
+            {
+                dao.SetDefaultAddrIsFalseByUserId(addrInfo.userId);
+            }
+
+
+            if (dao.GetById(addrInfo.id) == null)
+            {
+                dao.Add(addrInfo);
+            }
+            else
+            {
+                dao.Update(addrInfo);
+            }
+
+            return Json("更新完毕");
+        }
 
 
         public JsonResult GetGoodsById(int goodsId)
@@ -105,6 +140,11 @@ namespace store.Controllers
         public JsonResult SaveOrUpdateUserInfo(String code, String nickName, String gender)
         {
             String openid = GetOpenid(code);
+            if(openid == "-1")
+            {
+                return Json("获取openid失败！");
+            }
+
             T_UserDAO dao = new T_UserDAO();
             T_User user = dao.getByOpenid(openid);
 
@@ -130,9 +170,6 @@ namespace store.Controllers
         {
             using (var httpClient = new HttpClient())
             {
-                //get
-                //String appid = "wxc7b914b79b9ad3fe";
-                //String secret = "ec6127816095041c8c233bb55fe00ebd";
                 //请上微信小程序申请自身id与秘钥
                 String appid = "";
                 String secret = "";
@@ -149,8 +186,15 @@ namespace store.Controllers
                 if (datas.Length > 7)
                     return datas[7];
                 else
-                    return "0";               
+                    return "-1";               
             }
+        }
+
+        public JsonResult DelAddrById(int id)
+        {
+            T_AddrDAO dao = new T_AddrDAO();
+            dao.DelById(id);
+            return Json("删除成功");
         }
 
 
